@@ -1,0 +1,48 @@
+body{
+    background:rgb(213, 196, 233);
+}
+
+.scopeA{
+    font-size: 60px; 
+}
+
+.scopeB{
+    font-size: 60px; 
+}
+
+
+
+/* stilos da modal */
+.modal-body{
+    background: rgb(191, 208, 241);
+}
+
+.modal-dialog{
+    width: 1200px;
+    
+}
+/* stilos da modal */
+
+.container{
+    display: flex;
+    justify-content: center;  
+}
+
+.form-check-input{
+    height: 30px;
+    width: 30px;
+    padding-right: 100px;   
+}
+
+.input-group-text{
+    font-size: 30px; 
+    padding-right: 150px;
+}
+
+.btn{
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+
+}
+
