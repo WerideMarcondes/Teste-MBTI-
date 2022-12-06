@@ -7,11 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITBM TESTER</title>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  <script src="scripts/scriptsItbm.js"></script>
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -21,11 +26,15 @@
 
   <!-- Modal Informaçoes iniciais -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
-    data-keyboard="false">
+    data-keyboard="false
+    ">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Para Começar o teste MBTI preencha seus dados</h5>
+          <h5 class="modal-title1" id="exampleModalLabel">"Há três maneiras de lidar com diferenças: você pode considerar a outra pessoa errada e se indignar; você
+            pode considerar você mesmo errado e se deprimir; ou você pode considerar que as duas formas são
+            justificáveis e interessantemente diferentes e simplesmente se DIVERIRTIR” - Isabel Myers</h5><br>
+          <h5 class="modal-title" id="exampleModalLabel">Para começar o teste MBTI preencha seus dados</h5>
         </div>
         <div class="modal-body">
           <nav>
@@ -39,19 +48,19 @@
           <label for="nome">Nome</label><input type="text" class="form-control input" id="nome" name="nome">
           <label class="texto" for="idade">Idade</label>
           <input class="form-control input" id="data" name="idade" type="number">
-          <label class="texto" for="sexo"><input class="input" type="radio" name="sexo"
-              id="masculino">Masculino</label><br>
-          <label class="texto" for="nome"><input class="input" type="radio" name="sexo"
-              id="feminino">Feminino</label><br>
-          <label class="texto" for="sexo"><input class="input" type="radio" name="sexo" id="lgbt">Prefiro não
+          <input class="form-check-input" type="radio" name="sexo" id="masculino"><label class="input-group-text"
+            for="sexo">Maculino</label><br>
+          <input class="form-check-input" type="radio" name="sexo" id="feminino"><label class="input-group-text"
+            for="sexo">Feminino</label><br>
+          <input class="form-check-input" type="radio" name="sexo" id="lgbt"><label class="input-group-text"
+            for="sexo">Prefiro não
             Informar</label>
         </div>
 
         <div class="modal-footer">
-          <button type="button" id="sair" class="btn btn-secondary">Sair
+          <button type="button" id="sair" class="btn btn-danger">Sair
           </button>
-
-          <button onclick="cadastra()" type="button" Class="btn btn-success" id="quiz1" data-toggle="modal"
+          <button onclick="cadastra()" type="button" Class="btn btn-success" id="fist-modal" data-toggle="modal"
             data-target="#quiz01">Salvar e Começar</button>
         </div>
       </div>
@@ -59,16 +68,18 @@
   </div>
   <!-- Modal Informaçoes iniciais -->
 
+
+
   <!-- Modal 1º questionario -->
   <div class="modal fade" id="quiz01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
     data-keyboard="false">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><span class="input-group-text">Selecione de acordo Com seu
-              perfil</span></h5>
+          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text">COMO VOCÊ INTERAGE COM O
+              MUNDO?</label></h5>
         </div>
-        <div class="modal-body">
+        <div class="modal-body-quis1">
 
           <div class="container">
             <div class="content first-content">
@@ -76,103 +87,103 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="scopeA"><span class="scopeA">E</span></th>
+                      <th scope="scopeA"><label class="scopeA">E</label></th>
                     </tr>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="1" value="E"><span
-                            class="input-group-text">MAIS FALANTE</span>
+                          <input class="form-check-input" type="radio" name="1" value="E"><label
+                            class="input-group-text">MAIS FALANTE</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="2" value="E"><span
+                          <input class="form-check-input" type="radio" name="2" value="E"><label
                             class="input-group-text">MAIS
-                            ABERTO</span>
+                            ABERTO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="3" value="E"><span
-                            class="input-group-text">IMPULSIVO</span>
+                          <input class="form-check-input" type="radio" name="3" value="E"><label
+                            class="input-group-text">IMPULSIVO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="4" value="E"><span
+                          <input class="form-check-input" type="radio" name="4" value="E"><label
                             class="input-group-text">MAIS
-                            SOCIAL</span>
+                            SOCIAL</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="5" value="E"><span
+                          <input class="form-check-input" type="radio" name="5" value="E"><label
                             class="input-group-text">AGE
-                            E DEPOIS PENSA</span>
+                            E DEPOIS PENSA</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
-                        <td> <input class="form-check-input" type="radio" name="6" value="E"><span
-                            class="input-group-text">ENTUSIASMADO</span>
-                        </td>
-                      </tr>
-                    </div>
-                    <div class="col-2">
-                      <tr>
-                        <td>
-                          <input class="form-check-input" type="radio" name="7" value="E"><span
-                            class="input-group-text">BARULHO</span>
+                        <td> <input class="form-check-input" type="radio" name="6" value="E"><label
+                            class="input-group-text">ENTUSIASMADO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="8" value="E"><span
-                            class="input-group-text">EXPRESSIVO</span>
+                          <input class="form-check-input" type="radio" name="7" value="E"><label
+                            class="input-group-text">BARULHO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="9" value="E"><span
-                            class="input-group-text">FORÇA</span>
+                          <input class="form-check-input" type="radio" name="8" value="E"><label
+                            class="input-group-text">EXPRESSIVO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="10" value="E"><span
-                            class="input-group-text">EU PREFIRO AGITAÇÃO</span>
+                          <input class="form-check-input" type="radio" name="9" value="E"><label
+                            class="input-group-text">FORÇA</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="11" value="E"><span
-                            class="input-group-text">MAIS DO QUE OUVE</span>
+                          <input class="form-check-input" type="radio" name="10" value="E"><label
+                            class="input-group-text">AGITAÇÃO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="12" value="E"><span
-                            class="input-group-text">EXPANSIVO</span>
+                          <input class="form-check-input" type="radio" name="11" value="E"><label
+                            class="input-group-text">MAIS DO QUE OUVE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="12" value="E"><label
+                            class="input-group-text">EXPANSIVO</label>
                         </td>
                       </tr>
                     </div>
@@ -186,102 +197,102 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col"><span class="scopeB">I</span></th>
+                      <th scope="col"><label class="scopeB">I</label></th>
                     </tr>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="1" value="I"><span
-                            class="input-group-text">MAIS OUVINTE</span>
+                          <input class="form-check-input" type="radio" name="1" value="I"><label
+                            class="input-group-text">MAIS OUVINTE</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="2" value="I"><span
-                            class="input-group-text">RESERVADO</span>
+                          <input class="form-check-input" type="radio" name="2" value="I"><label
+                            class="input-group-text">RESERVADO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="3" value="I"><span
-                            class="input-group-text">RECATADO</span>
+                          <input class="form-check-input" type="radio" name="3" value="I"><label
+                            class="input-group-text">RECATADO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="4" value="I"> <span
+                          <input class="form-check-input" type="radio" name="4" value="I"><label
                             class="input-group-text">MAIS
-                            INDIVIDUAL</span>
+                            INDIVIDUAL</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="5" value="I"><span
-                            class="input-group-text">PENSA DEPOIS AGE</span>
+                          <input class="form-check-input" type="radio" name="5" value="I"><label
+                            class="input-group-text">PENSA DEPOIS AGE</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="6" value="I"><span
-                            class="input-group-text">QUIETO</span>
+                          <input class="form-check-input" type="radio" name="6" value="I"><label
+                            class="input-group-text">QUIETO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="7" value="I"><span
-                            class="input-group-text">SILENCIO</span>
+                          <input class="form-check-input" type="radio" name="7" value="I"><label
+                            class="input-group-text">SILENCIO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="8" value="I"><span
-                            class="input-group-text">CONTIDO</span>
+                          <input class="form-check-input" type="radio" name="8" value="I"><label
+                            class="input-group-text">CONTIDO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="9" value="I"><span
-                            class="input-group-text">DELICADEZA</span>
+                          <input class="form-check-input" type="radio" name="9" value="I"><label
+                            class="input-group-text">DELICADEZA</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="10" value="I"><span
-                            class="input-group-text">CALMARIA</span>
+                          <input class="form-check-input" type="radio" name="10" value="I"><label
+                            class="input-group-text">CALMARIA</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="11" value="I"><span
-                            class="input-group-text">OUVE MAIS QUE FALA</span>
+                          <input class="form-check-input" type="radio" name="11" value="I"><label
+                            class="input-group-text">OUVE MAIS QUE FALA</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="12" value="I"><span
-                            class="input-group-text">INTROSPECTIVOL</span>
+                          <input class="form-check-input" type="radio" name="12" value="I"><label
+                            class="input-group-text">INTROSPECTIVOL</label>
                         </td>
                       </tr>
                     </div>
@@ -292,27 +303,818 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" Class="btn btn-success" d id="quiz1" data-toggle="modal"
-              data-target="#quiz01">Questionário 2</button>
-            <button type="button" id="sair" class="btn btn-secondary">Sair
+            <button type="button" Class="btn btn-success" data-toggle="modal" data-target="#quiz02">Questionário
+              2</button>
+            <button type="button" id="sair" class="btn btn-danger">Sair
             </button>
+            <button id="bt" class="btn-primary" onclick="resultado()" type="button">Resultado</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Modal 1º questionario -->
+  </div>
+  <!-- Modal 1º questionario -->
 
 
-    <script>
+  <!-- Modal 2º questionario -->
+  <div class="modal fade" id="quiz02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
+    data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text">COMO VOCÊ PERCEBE E ASSIMILA AS
+              INFORMAÇÕES?</label></h5>
+        </div>
+        <div class="modal-body-quis2">
+
+          <div class="container">
+            <div class="content first-content">
+              <div class="row align-items-start">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="scopeA"><label class="scopeA">S</label></th>
+                    </tr>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="13" value="S"><label
+                            class="input-group-text">PES-NO-CHAO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="14" value="S"><label
+                            class="input-group-text">EXPERIENCIA</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="15" value="S"><label
+                            class="input-group-text">VISAO FOCADA EM DETALHES</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="16" value="S"><label
+                            class="input-group-text">PRATICIDADE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="17" value="S"><label
+                            class="input-group-text">ESPECIFICO E LITERAL</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td> <input class="form-check-input" type="radio" name="18" value="S"><label
+                            class="input-group-text">INFORMACOES PASSO A PASSO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="19" value="S"><label
+                            class="input-group-text">REALIDADE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="20" value="S"><label
+                            class="input-group-text">SEGURANÇA</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="21" value="S"><label
+                            class="input-group-text">PRESENTE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="22" value="S"><label
+                            class="input-group-text">FATOS</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="23" value="S"><label
+                            class="input-group-text">FAZ</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="24" value="S"><label
+                            class="input-group-text">CONCRETO</label>
+                        </td>
+                      </tr>
+                    </div>
+                  </thead>
+                </table>
+              </div>
+            </div>
+
+            <div class="content second-content">
+              <div class="row align-items-start">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col"><label class="scopeB">N</label></th>
+                    </tr>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="13" value="N"><label
+                            class="input-group-text">CHEIO DE IDEIAS</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="14" value="N"><label
+                            class="input-group-text">INSTITIVO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="15" value="N"><label
+                            class="input-group-text">VISÃO GLOBAL</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="16" value="N"><label
+                            class="input-group-text">IMAGINAÇÃO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="17" value="N"><label
+                            class="input-group-text">METAFORAS E ANALOGIAS</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="18" value="N"><label
+                            class="input-group-text">INFORMAÇOES DE FORMA DIRETA</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="19" value="N"><label
+                            class="input-group-text">INTUIÇÃO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="20" value="N"><label
+                            class="input-group-text">LIBERDADE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="21" value="N"><label
+                            class="input-group-text">FUTURO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="22" value="N"><label
+                            class="input-group-text">POSSIBILIDADE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="23" value="N"><label
+                            class="input-group-text">CRIA</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="24" value="N"><label
+                            class="input-group-text">ABSTRATO</label>
+                        </td>
+                      </tr>
+                    </div>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" Class="btn btn-primary" data-toggle="modal" data-target="#quiz01">Voltar 01</button>
+            <button type="button" Class="btn btn-success" id="quiz1" data-toggle="modal"
+              data-target="#quiz03">Questionário 3</button>
+            <button type="button" id="sair" class="btn btn-danger">Sair
+            </button>
+            <button id="bt" class="btn-primary" onclick="resultado()" type="button">Resultado</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2º questionario -->
 
 
-      //função carregar modal informaçoes iniciais
-      $(document).ready(function () {
-        $('#myModal').modal('show');
+  <!-- Modal 3º questionario -->
+  <div class="modal fade" id="quiz03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
+    data-keyboard="false">>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text">COMO VOCÊ PERCEBE E ASSIMILA
+              AS INFORMAÇÕES?</label></h5>
+        </div>
+        <div class="modal-body-quis3">
 
-      });
+          <div class="container">
+            <div class="content first-content">
+              <div class="row align-items-start">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="scopeA"><label class="scopeA">T</label></th>
+                    </tr>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="25" value="T"><label
+                            class="input-group-text">ANALISADOR</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="26" value="T"><label
+                            class="input-group-text">OBJETIVO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="27" value="T"><label
+                            class="input-group-text">RAZÃO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="28" value="T"><label
+                            class="input-group-text">MAIS LOGICO QUE SENTIMENTAL</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="29" value="T"><label
+                            class="input-group-text">CRITICO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td> <input class="form-check-input" type="radio" name="30" value="T"><label
+                            class="input-group-text">OBSERVADOR</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="31" value="T"><label
+                            class="input-group-text">DECIDE BASEADO EM PRINCIPÍOS</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="32" value="T"><label
+                            class="input-group-text">PENSAMENTO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="33" value="T"><label
+                            class="input-group-text">CONVICENTE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="34" value="T"><label
+                            class="input-group-text">MAIS FRIO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="35" value="T"><label
+                            class="input-group-text">NATURALMENTE VÊ FALHA TENDE SER CRITICO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="36" value="T"><label
+                            class="input-group-text">JUSTIÇA</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="37" value="T"><label
+                            class="input-group-text">MOTIVADO PELO DESEJO DE REALIZAÇÃO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="38" value="T"><label
+                            class="input-group-text">FIRME</label>
+                        </td>
+                      </tr>
+                    </div>
+                  </thead>
+                </table>
+              </div>
+            </div>
 
-    </script>
+            <div class="content second-content">
+              <div class="row align-items-start">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col"><label class="scopeB">F</label></th>
+                    </tr>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="25" value="N"><label
+                            class="input-group-text">SIMPATIZADOR</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="26" value="N"><label
+                            class="input-group-text">EMOCIONAL</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="27" value="N"><label
+                            class="input-group-text">CORAÇÃO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="28" value="N"><label
+                            class="input-group-text">MAIS HUMANO QUE RACIONAL</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="29" value="N"><label
+                            class="input-group-text">ACEITÁVEL</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="30" value="N"><label
+                            class="input-group-text">PARTICIPANTE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="31" value="N"><label
+                            class="input-group-text">DECIDE BASEADOS EM VALORES</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="32" value="N"><label
+                            class="input-group-text">SENTIMENTO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="33" value="N"><label
+                            class="input-group-text">COMOVENTE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="34" value="N"><label
+                            class="input-group-text">MAIS CALOROSO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="35" value="N"><label
+                            class="input-group-text">NATURALMENTE GOSTA DE AGRADAR OS OUTROS</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="36" value="N"><label
+                            class="input-group-text">HARMONIA</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="37" value="T"><label
+                            class="input-group-text">MOTIVADO PELO DESEJO DE SER APRECIADO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="38" value="T"><label
+                            class="input-group-text">GENTIL</label>
+                        </td>
+                      </tr>
+                    </div>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" Class="btn btn-primary" data-toggle="modal" data-target="#quiz01">Voltar 01</button>
+            <button type="button" Class="btn btn-success" id="quiz1" data-toggle="modal"
+              data-target="#quiz04">Questionário 4</button>
+            <button type="button" id="sair" class="btn btn-danger">Sair
+            </button>
+            <button id="bt" class="btn-primary" onclick="resultado()" type="button">Resultado</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 3º questionario -->
+
+  <!-- Modal 4º questionario -->
+  <div class="modal fade" id="quiz04" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
+    data-keyboard="false">>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text">COMO VOCÊ PREFERE ORGANIZAR SUA VIDA?</label></h5>
+        </div>
+        <div class="modal-body-quis4">
+
+          <div class="container">
+            <div class="content first-content">
+              <div class="row align-items-start">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="scopeA"><label class="scopeA">J</label></th>
+                    </tr>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="39" value="J"><label
+                            class="input-group-text">TOMAR DECISÕES PRONTAMENTE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="40" value="J"><label
+                            class="input-group-text">PENSA ESTRUTURADAMENTE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="41" value="J"><label
+                            class="input-group-text">ORGANIZA A VIDA </label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="42" value="J"><label
+                            class="input-group-text">PLANEJADO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="43" value="J"><label
+                            class="input-group-text">DECIDIDO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td> <input class="form-check-input" type="radio" name="44" value="J"><label
+                            class="input-group-text">CONTROLADO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="45" value="J"><label
+                            class="input-group-text">LIMITA QUANTIADDE DE INFORMAÇÃO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="46" value="J"><label
+                            class="input-group-text">DETERMINADO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="47" value="J"><label
+                            class="input-group-text">VALORIZA A ORDEM</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="48" value="J"><label
+                            class="input-group-text">PREFER O QUE E CONHECIDO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="49" value="J"><label
+                            class="input-group-text">SISTEMÁTICO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="50" value="J"><label
+                            class="input-group-text">DISCIPLINADO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="51" value="J"><label
+                            class="input-group-text">SEGUE A ROTINA</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="52" value="J"><label
+                            class="input-group-text">PERSEGUE OBJETIVOS</label>
+                        </td>
+                      </tr>
+                    </div>
+                  </thead>
+                </table>
+              </div>
+            </div>
+
+            <div class="content second-content">
+              <div class="row align-items-start">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col"><label class="scopeB">P</label></th>
+                    </tr>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="39" value="P"><label
+                            class="input-group-text">TEM DIFICILDADE PARA TOMAR DECIÕES</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="40" value="P"><label
+                            class="input-group-text">PENSA GLOBALMENTE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="41" value="P"><label
+                            class="input-group-text">DEIXA A VIDA ACONTECER</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="42" value="P"><label
+                            class="input-group-text">FLEXIVEL</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="43" value="P"><label
+                            class="input-group-text">IMPULSIVO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="44" value="P"><label
+                            class="input-group-text">ESPONTÂNEO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="45" value="P"><label
+                            class="input-group-text">OUVE TODOS OS LADOS</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="46" value="P"><label
+                            class="input-group-text">DEDICADO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="47" value="P"><label
+                            class="input-group-text">VALORIZA A LIBERDADE</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="48" value="P"><label
+                            class="input-group-text">GOSTA MAIS DO NOVO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="49" value="P"><label
+                            class="input-group-text">IMPROVISADO</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="50" value="P"><label
+                            class="input-group-text">SEM REGRAS</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="51" value="P"><label
+                            class="input-group-text">ABERTO AS MUDANÇAS</label>
+                        </td>
+                      </tr>
+                    </div>
+                    <div class="col-2">
+                      <tr>
+                        <td>
+                          <input class="form-check-input" type="radio" name="52" value="P"><label
+                            class="input-group-text">IDETIFICA OPORTUNIDADES</label>
+                        </td>
+                      </tr>
+                    </div>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" Class="btn btn-primary" data-toggle="modal" data-target="#quiz01">Voltar 01</button>
+            <button type="button" Class="btn btn-success" id="quiz1" data-toggle="modal"
+              data-target="#quiz01">Questionário 4</button>
+            <button type="button" id="sair" class="btn btn-danger">Sair
+            </button>
+            <button id="bt" class="btn-primary" onclick="resultado()" type="button">Resultado</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 4º questionario -->
+  <script>
+
+
+    //função carregar modal informaçoes iniciais
+    $(document).ready(function () {
+      $('#myModal').modal('show');
+
+    });
+
+  </script>
 </body>
 
 </html>

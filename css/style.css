@@ -3,13 +3,12 @@ body{
 }
 
 .scopeA{
-    font-size: 60px; 
+    font-size: 40px; 
 }
 
 .scopeB{
-    font-size: 60px; 
+    font-size: 40px; 
 }
-
 
 
 /* stilos da modal */
@@ -17,32 +16,83 @@ body{
     background: rgb(191, 208, 241);
 }
 
+/* stilos da modal quiz01 */
+.modal-body-quis1{
+    background: rgb(204, 169, 196);
+}
+
+/* stilos da modal quiz02 */
+.modal-body-quis2{
+    background: rgb(148, 179, 241);
+}
+
+/* stilos da modal quiz03 */
+.modal-body-quis3{
+    background: rgb(189, 240, 236);
+}
+
+/* stilos da modal quiz04 */
+.modal-body-quis4{
+    background: rgb(131, 91, 240);
+}
+
+
+.modal-title1{
+    font-size: 20px; 
+    text-align: center;
+}
+
+.modal-title{
+    font-size: 40px; 
+    text-align: center;
+}
+
 .modal-dialog{
-    width: 1200px;
+    width:1200px;
+    height: 100vh;
     
 }
-/* stilos da modal */
-
+/* stilos da modal quiz 01*/
 .container{
     display: flex;
     justify-content: center;  
+    
 }
 
+
+/*Radios dos questionarios*/
 .form-check-input{
-    height: 30px;
-    width: 30px;
-    padding-right: 100px;   
+    height: 20px;
+    width: 20PX;
+     
 }
 
+/*labels dos questionarios*/
 .input-group-text{
-    font-size: 30px; 
-    padding-right: 150px;
+    font-size: 20px; 
+    margin-left: 10PX;
 }
 
+/*botoes*/
 .btn{
     height: 50px;
     width: 200px;
     font-size: 20px;
+    margin-right: 70px;
 
+}
+
+/*segundo conteudo containers dos questionários */
+.second-content{
+    margin-left: 10px;
+    
+}
+.first-content{
+    margin-right: 10px;
+ 
+   
+}
+.table{
+    width: 600px;
 }
 
