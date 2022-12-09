@@ -11,6 +11,7 @@
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -31,7 +32,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title1" id="exampleModalLabel">"Há três maneiras de lidar com diferenças: você pode considerar a outra pessoa errada e se indignar; você
+          <h5 class="modal-title1" id="exampleModalLabel">"Há três maneiras de lidar com diferenças: você pode
+            considerar a outra pessoa errada e se indignar; você
             pode considerar você mesmo errado e se deprimir; ou você pode considerar que as duas formas são
             justificáveis e interessantemente diferentes e simplesmente se DIVERIRTIR” - Isabel Myers</h5><br>
           <h5 class="modal-title" id="exampleModalLabel">Para começar o teste MBTI preencha seus dados</h5>
@@ -45,11 +47,11 @@
               </li>
             </ul>
           </nav>
-          <label for="nome">Nome</label><input type="text" class="form-control input" id="nome" name="nome">
+          <label for="nome">Nome</label><input type="text" class="form-control input-nome" id="nome" name="nome"><br>
           <label class="texto" for="idade">Idade</label>
-          <input class="form-control input" id="data" name="idade" type="number">
-          <input class="form-check-input" type="radio" name="sexo" id="masculino"><label class="input-group-text"
-            for="sexo">Maculino</label><br>
+          <input class="form-control input-idade" id="data" name="idade" type="number"><br>
+          <input class="form-check-input" type="radio" name="sexo" value="Sexo" id="masculino"><label
+            class="input-group-text" for="sexo">Maculino</label><br>
           <input class="form-check-input" type="radio" name="sexo" id="feminino"><label class="input-group-text"
             for="sexo">Feminino</label><br>
           <input class="form-check-input" type="radio" name="sexo" id="lgbt"><label class="input-group-text"
@@ -60,8 +62,8 @@
         <div class="modal-footer">
           <button type="button" id="sair" class="btn btn-danger">Sair
           </button>
-          <button onclick="cadastra()" type="button" Class="btn btn-success" id="fist-modal" data-toggle="modal"
-            data-target="#quiz01">Salvar e Começar</button>
+          <button onclick="cadastra()" id="salvar" type="button" Class="btn btn-success" id="fist-modal"
+            data-toggle="modal">Salvar e Começar</button>
         </div>
       </div>
     </div>
@@ -76,7 +78,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text">COMO VOCÊ INTERAGE COM O
+          <div class="container1">
+            <div class="StatusQuis1 Status">1º</div>
+            <div class="StatusQuis1 Status">2º</div>
+            <div class="StatusQuis1 Status">3º</div>
+            <div class="StatusQuis1 Status">4º</div>
+          </div>
+          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text-scope">1º QUESTIONÁRIO COMO VOCÊ
+              INTERAGE COM O
               MUNDO?</label></h5>
         </div>
         <div class="modal-body-quis1">
@@ -86,13 +95,13 @@
               <div class="row align-items-start">
                 <table class="table">
                   <thead>
-                    <tr>
+                    <tr class="tr">
                       <th scope="scopeA"><label class="scopeA">E</label></th>
                     </tr>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="1" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="1" value="E"><label
                             class="input-group-text">MAIS FALANTE</label>
                         </td>
                       </tr>
@@ -100,7 +109,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="2" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="2" value="E"><label
                             class="input-group-text">MAIS
                             ABERTO</label>
                         </td>
@@ -109,7 +118,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="3" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="3" value="E"><label
                             class="input-group-text">IMPULSIVO</label>
                         </td>
                       </tr>
@@ -117,7 +126,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="4" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="4" value="E"><label
                             class="input-group-text">MAIS
                             SOCIAL</label>
                         </td>
@@ -126,7 +135,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="5" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="5" value="E"><label
                             class="input-group-text">AGE
                             E DEPOIS PENSA</label>
                         </td>
@@ -134,7 +143,7 @@
                     </div>
                     <div class="col-2">
                       <tr>
-                        <td> <input class="form-check-input" type="radio" name="6" value="E"><label
+                        <td> <input class="form-check-input quiz01" type="radio" name="6" value="E"><label
                             class="input-group-text">ENTUSIASMADO</label>
                         </td>
                       </tr>
@@ -142,7 +151,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="7" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="7" value="E"><label
                             class="input-group-text">BARULHO</label>
                         </td>
                       </tr>
@@ -150,7 +159,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="8" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="8" value="E"><label
                             class="input-group-text">EXPRESSIVO</label>
                         </td>
                       </tr>
@@ -158,7 +167,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="9" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="9" value="E"><label
                             class="input-group-text">FORÇA</label>
                         </td>
                       </tr>
@@ -166,7 +175,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="10" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="10" value="E"><label
                             class="input-group-text">AGITAÇÃO</label>
                         </td>
                       </tr>
@@ -174,7 +183,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="11" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="11" value="E"><label
                             class="input-group-text">MAIS DO QUE OUVE</label>
                         </td>
                       </tr>
@@ -182,7 +191,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="12" value="E"><label
+                          <input class="form-check-input quiz01" type="radio" name="12" value="E"><label
                             class="input-group-text">EXPANSIVO</label>
                         </td>
                       </tr>
@@ -202,7 +211,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="1" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="1" value="I"><label
                             class="input-group-text">MAIS OUVINTE</label>
                         </td>
                       </tr>
@@ -210,7 +219,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="2" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="2" value="I"><label
                             class="input-group-text">RESERVADO</label>
                         </td>
                       </tr>
@@ -218,7 +227,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="3" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="3" value="I"><label
                             class="input-group-text">RECATADO</label>
                         </td>
                       </tr>
@@ -226,7 +235,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="4" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="4" value="I"><label
                             class="input-group-text">MAIS
                             INDIVIDUAL</label>
                         </td>
@@ -235,7 +244,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="5" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="5" value="I"><label
                             class="input-group-text">PENSA DEPOIS AGE</label>
                         </td>
                       </tr>
@@ -243,7 +252,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="6" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="6" value="I"><label
                             class="input-group-text">QUIETO</label>
                         </td>
                       </tr>
@@ -251,7 +260,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="7" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="7" value="I"><label
                             class="input-group-text">SILENCIO</label>
                         </td>
                       </tr>
@@ -259,7 +268,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="8" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="8" value="I"><label
                             class="input-group-text">CONTIDO</label>
                         </td>
                       </tr>
@@ -267,7 +276,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="9" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="9" value="I"><label
                             class="input-group-text">DELICADEZA</label>
                         </td>
                       </tr>
@@ -275,7 +284,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="10" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="10" value="I"><label
                             class="input-group-text">CALMARIA</label>
                         </td>
                       </tr>
@@ -283,7 +292,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="11" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="11" value="I"><label
                             class="input-group-text">OUVE MAIS QUE FALA</label>
                         </td>
                       </tr>
@@ -291,7 +300,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="12" value="I"><label
+                          <input class="form-check-input quiz01" type="radio" name="12" value="I"><label
                             class="input-group-text">INTROSPECTIVOL</label>
                         </td>
                       </tr>
@@ -301,14 +310,13 @@
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" Class="btn btn-success" data-toggle="modal" data-target="#quiz02">Questionário
-              2</button>
-            <button type="button" id="sair" class="btn btn-danger">Sair
-            </button>
-            <button id="bt" class="btn-primary" onclick="resultado()" type="button">Resultado</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" Class="btn btn-primary" data-toggle="modal" id="voltarQ1">Voltar
+            01</button>
+          <button onclick="resultado()" type="button" Class="btn btn-success" data-toggle="modal">Questionário
+            2</button>
+          <button data-toggle="modal" type="button" id="sair" class="btn btn-danger">Sair
         </div>
       </div>
     </div>
@@ -322,7 +330,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text">COMO VOCÊ PERCEBE E ASSIMILA AS
+          <div class="container1">
+            <div class="StatusQuis2 Status">1º</div>
+            <div class="StatusQuis2 Status">2º</div>
+            <div class="StatusQuis2 Status">3º</div>
+            <div class="StatusQuis2 Status">4º</div>
+          </div>
+          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text-scope">2º QUESTIONÁRIO COMO VOCÊ
+              PERCEBE E ASSIMILA AS
               INFORMAÇÕES?</label></h5>
         </div>
         <div class="modal-body-quis2">
@@ -338,7 +353,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="13" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="13" value="S"><label
                             class="input-group-text">PES-NO-CHAO</label>
                         </td>
                       </tr>
@@ -346,7 +361,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="14" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="14" value="S"><label
                             class="input-group-text">EXPERIENCIA</label>
                         </td>
                       </tr>
@@ -354,7 +369,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="15" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="15" value="S"><label
                             class="input-group-text">VISAO FOCADA EM DETALHES</label>
                         </td>
                       </tr>
@@ -362,7 +377,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="16" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="16" value="S"><label
                             class="input-group-text">PRATICIDADE</label>
                         </td>
                       </tr>
@@ -370,14 +385,14 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="17" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="17" value="S"><label
                             class="input-group-text">ESPECIFICO E LITERAL</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
-                        <td> <input class="form-check-input" type="radio" name="18" value="S"><label
+                        <td> <input class="form-check-input quiz02" type="radio" name="18" value="S"><label
                             class="input-group-text">INFORMACOES PASSO A PASSO</label>
                         </td>
                       </tr>
@@ -385,7 +400,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="19" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="19" value="S"><label
                             class="input-group-text">REALIDADE</label>
                         </td>
                       </tr>
@@ -393,7 +408,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="20" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="20" value="S"><label
                             class="input-group-text">SEGURANÇA</label>
                         </td>
                       </tr>
@@ -401,7 +416,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="21" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="21" value="S"><label
                             class="input-group-text">PRESENTE</label>
                         </td>
                       </tr>
@@ -409,7 +424,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="22" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="22" value="S"><label
                             class="input-group-text">FATOS</label>
                         </td>
                       </tr>
@@ -417,7 +432,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="23" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="23" value="S"><label
                             class="input-group-text">FAZ</label>
                         </td>
                       </tr>
@@ -425,7 +440,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="24" value="S"><label
+                          <input class="form-check-input quiz02" type="radio" name="24" value="S"><label
                             class="input-group-text">CONCRETO</label>
                         </td>
                       </tr>
@@ -445,7 +460,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="13" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="13" value="N"><label
                             class="input-group-text">CHEIO DE IDEIAS</label>
                         </td>
                       </tr>
@@ -453,7 +468,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="14" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="14" value="N"><label
                             class="input-group-text">INSTITIVO</label>
                         </td>
                       </tr>
@@ -461,7 +476,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="15" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="15" value="N"><label
                             class="input-group-text">VISÃO GLOBAL</label>
                         </td>
                       </tr>
@@ -469,7 +484,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="16" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="16" value="N"><label
                             class="input-group-text">IMAGINAÇÃO</label>
                         </td>
                       </tr>
@@ -477,7 +492,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="17" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="17" value="N"><label
                             class="input-group-text">METAFORAS E ANALOGIAS</label>
                         </td>
                       </tr>
@@ -485,15 +500,15 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="18" value="N"><label
-                            class="input-group-text">INFORMAÇOES DE FORMA DIRETA</label>
+                          <input class="form-check-input quiz02" type="radio" name="18" value="N"><label
+                            class="input-group-text quiz02">INFORMAÇOES DE FORMA DIRETA</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="19" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="19" value="N"><label
                             class="input-group-text">INTUIÇÃO</label>
                         </td>
                       </tr>
@@ -501,7 +516,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="20" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="20" value="N"><label
                             class="input-group-text">LIBERDADE</label>
                         </td>
                       </tr>
@@ -509,7 +524,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="21" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="21" value="N"><label
                             class="input-group-text">FUTURO</label>
                         </td>
                       </tr>
@@ -517,7 +532,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="22" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="22" value="N"><label
                             class="input-group-text">POSSIBILIDADE</label>
                         </td>
                       </tr>
@@ -525,7 +540,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="23" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="23" value="N"><label
                             class="input-group-text">CRIA</label>
                         </td>
                       </tr>
@@ -533,7 +548,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="24" value="N"><label
+                          <input class="form-check-input quiz02" type="radio" name="24" value="N"><label
                             class="input-group-text">ABSTRATO</label>
                         </td>
                       </tr>
@@ -543,21 +558,19 @@
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" Class="btn btn-primary" data-toggle="modal" data-target="#quiz01">Voltar 01</button>
-            <button type="button" Class="btn btn-success" id="quiz1" data-toggle="modal"
-              data-target="#quiz03">Questionário 3</button>
-            <button type="button" id="sair" class="btn btn-danger">Sair
-            </button>
-            <button id="bt" class="btn-primary" onclick="resultado()" type="button">Resultado</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" Class="btn btn-primary" data-toggle="modal" id="voltarQ1">Voltar
+            01</button>
+          <button type="button" onclick="resultado2()" Class="btn btn-success" data-toggle="modal">Questionário
+            3</button>
+          <button type="button" id="sair" class="btn btn-danger">Sair
+          </button>
         </div>
       </div>
     </div>
   </div>
   <!-- Modal 2º questionario -->
-
 
   <!-- Modal 3º questionario -->
   <div class="modal fade" id="quiz03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
@@ -565,7 +578,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text">COMO VOCÊ PERCEBE E ASSIMILA
+          <div class="container1">
+            <div class="StatusQuis3 Status">1º</div>
+            <div class="StatusQuis3 Status">2º</div>
+            <div class="StatusQuis3 Status">3º</div>
+            <div class="StatusQuis3 Status">4º</div>
+          </div>
+          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text-scope"> 3º QUESTIONÁRIO COMO VOCÊ
+              PERCEBE E ASSIMILA
               AS INFORMAÇÕES?</label></h5>
         </div>
         <div class="modal-body-quis3">
@@ -581,7 +601,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="25" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="25" value="T"><label
                             class="input-group-text">ANALISADOR</label>
                         </td>
                       </tr>
@@ -589,7 +609,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="26" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="26" value="T"><label
                             class="input-group-text">OBJETIVO</label>
                         </td>
                       </tr>
@@ -597,7 +617,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="27" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="27" value="T"><label
                             class="input-group-text">RAZÃO</label>
                         </td>
                       </tr>
@@ -605,7 +625,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="28" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="28" value="T"><label
                             class="input-group-text">MAIS LOGICO QUE SENTIMENTAL</label>
                         </td>
                       </tr>
@@ -613,14 +633,14 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="29" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="29" value="T"><label
                             class="input-group-text">CRITICO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
-                        <td> <input class="form-check-input" type="radio" name="30" value="T"><label
+                        <td> <input class="form-check-input quiz03" type="radio" name="30" value="T"><label
                             class="input-group-text">OBSERVADOR</label>
                         </td>
                       </tr>
@@ -628,7 +648,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="31" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="31" value="T"><label
                             class="input-group-text">DECIDE BASEADO EM PRINCIPÍOS</label>
                         </td>
                       </tr>
@@ -636,7 +656,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="32" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="32" value="T"><label
                             class="input-group-text">PENSAMENTO</label>
                         </td>
                       </tr>
@@ -644,7 +664,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="33" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="33" value="T"><label
                             class="input-group-text">CONVICENTE</label>
                         </td>
                       </tr>
@@ -652,7 +672,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="34" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="34" value="T"><label
                             class="input-group-text">MAIS FRIO</label>
                         </td>
                       </tr>
@@ -660,7 +680,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="35" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="35" value="T"><label
                             class="input-group-text">NATURALMENTE VÊ FALHA TENDE SER CRITICO</label>
                         </td>
                       </tr>
@@ -668,7 +688,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="36" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="36" value="T"><label
                             class="input-group-text">JUSTIÇA</label>
                         </td>
                       </tr>
@@ -676,7 +696,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="37" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="37" value="T"><label
                             class="input-group-text">MOTIVADO PELO DESEJO DE REALIZAÇÃO</label>
                         </td>
                       </tr>
@@ -684,7 +704,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="38" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="38" value="T"><label
                             class="input-group-text">FIRME</label>
                         </td>
                       </tr>
@@ -704,7 +724,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="25" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="25" value="F"><label
                             class="input-group-text">SIMPATIZADOR</label>
                         </td>
                       </tr>
@@ -712,7 +732,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="26" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="26" value="F"><label
                             class="input-group-text">EMOCIONAL</label>
                         </td>
                       </tr>
@@ -720,7 +740,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="27" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="27" value="F"><label
                             class="input-group-text">CORAÇÃO</label>
                         </td>
                       </tr>
@@ -728,7 +748,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="28" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="28" value="F"><label
                             class="input-group-text">MAIS HUMANO QUE RACIONAL</label>
                         </td>
                       </tr>
@@ -736,7 +756,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="29" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="29" value="F"><label
                             class="input-group-text">ACEITÁVEL</label>
                         </td>
                       </tr>
@@ -744,7 +764,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="30" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="30" value="F"><label
                             class="input-group-text">PARTICIPANTE</label>
                         </td>
                       </tr>
@@ -752,7 +772,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="31" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="31" value="F"><label
                             class="input-group-text">DECIDE BASEADOS EM VALORES</label>
                         </td>
                       </tr>
@@ -760,7 +780,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="32" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="32" value="F"><label
                             class="input-group-text">SENTIMENTO</label>
                         </td>
                       </tr>
@@ -768,7 +788,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="33" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="33" value="F"><label
                             class="input-group-text">COMOVENTE</label>
                         </td>
                       </tr>
@@ -776,7 +796,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="34" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="34" value="F"><label
                             class="input-group-text">MAIS CALOROSO</label>
                         </td>
                       </tr>
@@ -784,7 +804,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="35" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="35" value="F"><label
                             class="input-group-text">NATURALMENTE GOSTA DE AGRADAR OS OUTROS</label>
                         </td>
                       </tr>
@@ -792,7 +812,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="36" value="N"><label
+                          <input class="form-check-input quiz03" type="radio" name="36" value="F"><label
                             class="input-group-text">HARMONIA</label>
                         </td>
                       </tr>
@@ -800,7 +820,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="37" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="37" value="F"><label
                             class="input-group-text">MOTIVADO PELO DESEJO DE SER APRECIADO</label>
                         </td>
                       </tr>
@@ -808,7 +828,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="38" value="T"><label
+                          <input class="form-check-input quiz03" type="radio" name="38" value="F"><label
                             class="input-group-text">GENTIL</label>
                         </td>
                       </tr>
@@ -818,15 +838,14 @@
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" Class="btn btn-primary" data-toggle="modal" data-target="#quiz01">Voltar 01</button>
-            <button type="button" Class="btn btn-success" id="quiz1" data-toggle="modal"
-              data-target="#quiz04">Questionário 4</button>
-            <button type="button" id="sair" class="btn btn-danger">Sair
-            </button>
-            <button id="bt" class="btn-primary" onclick="resultado()" type="button">Resultado</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" Class="btn btn-primary" data-toggle="modal" id="voltarQ2">Voltar
+            02</button>
+          <button type="button" onclick="resultado3()" Class="btn btn-success" data-toggle="modal">Questionário
+            4</button>
+          <button type="button" id="sair" class="btn btn-danger">Sair
+          </button>
         </div>
       </div>
     </div>
@@ -839,7 +858,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text">COMO VOCÊ PREFERE ORGANIZAR SUA VIDA?</label></h5>
+          <div class="container1">
+            <div class="StatusQuis4 Status">1º</div>
+            <div class="StatusQuis4 Status">2º</div>
+            <div class="StatusQuis4 Status">3º</div>
+            <div class="StatusQuisFinal Status">4º</div>
+          </div>
+          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text-scope">4º QUESTIONÁRIO COMO VOCÊ
+              PREFERE ORGANIZAR SUA VIDA?</label></h5>
         </div>
         <div class="modal-body-quis4">
 
@@ -854,7 +880,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="39" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="39" value="J"><label
                             class="input-group-text">TOMAR DECISÕES PRONTAMENTE</label>
                         </td>
                       </tr>
@@ -862,7 +888,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="40" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="40" value="J"><label
                             class="input-group-text">PENSA ESTRUTURADAMENTE</label>
                         </td>
                       </tr>
@@ -870,7 +896,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="41" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="41" value="J"><label
                             class="input-group-text">ORGANIZA A VIDA </label>
                         </td>
                       </tr>
@@ -878,7 +904,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="42" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="42" value="J"><label
                             class="input-group-text">PLANEJADO</label>
                         </td>
                       </tr>
@@ -886,14 +912,14 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="43" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="43" value="J"><label
                             class="input-group-text">DECIDIDO</label>
                         </td>
                       </tr>
                     </div>
                     <div class="col-2">
                       <tr>
-                        <td> <input class="form-check-input" type="radio" name="44" value="J"><label
+                        <td> <input class="form-check-input quiz04" type="radio" name="44" value="J"><label
                             class="input-group-text">CONTROLADO</label>
                         </td>
                       </tr>
@@ -901,7 +927,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="45" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="45" value="J"><label
                             class="input-group-text">LIMITA QUANTIADDE DE INFORMAÇÃO</label>
                         </td>
                       </tr>
@@ -909,7 +935,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="46" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="46" value="J"><label
                             class="input-group-text">DETERMINADO</label>
                         </td>
                       </tr>
@@ -917,7 +943,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="47" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="47" value="J"><label
                             class="input-group-text">VALORIZA A ORDEM</label>
                         </td>
                       </tr>
@@ -925,7 +951,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="48" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="48" value="J"><label
                             class="input-group-text">PREFER O QUE E CONHECIDO</label>
                         </td>
                       </tr>
@@ -933,7 +959,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="49" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="49" value="J"><label
                             class="input-group-text">SISTEMÁTICO</label>
                         </td>
                       </tr>
@@ -941,7 +967,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="50" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="50" value="J"><label
                             class="input-group-text">DISCIPLINADO</label>
                         </td>
                       </tr>
@@ -949,7 +975,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="51" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="51" value="J"><label
                             class="input-group-text">SEGUE A ROTINA</label>
                         </td>
                       </tr>
@@ -957,7 +983,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="52" value="J"><label
+                          <input class="form-check-input quiz04" type="radio" name="52" value="J"><label
                             class="input-group-text">PERSEGUE OBJETIVOS</label>
                         </td>
                       </tr>
@@ -977,7 +1003,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="39" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="39" value="P"><label
                             class="input-group-text">TEM DIFICILDADE PARA TOMAR DECIÕES</label>
                         </td>
                       </tr>
@@ -985,7 +1011,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="40" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="40" value="P"><label
                             class="input-group-text">PENSA GLOBALMENTE</label>
                         </td>
                       </tr>
@@ -993,7 +1019,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="41" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="41" value="P"><label
                             class="input-group-text">DEIXA A VIDA ACONTECER</label>
                         </td>
                       </tr>
@@ -1001,7 +1027,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="42" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="42" value="P"><label
                             class="input-group-text">FLEXIVEL</label>
                         </td>
                       </tr>
@@ -1009,7 +1035,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="43" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="43" value="P"><label
                             class="input-group-text">IMPULSIVO</label>
                         </td>
                       </tr>
@@ -1017,7 +1043,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="44" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="44" value="P"><label
                             class="input-group-text">ESPONTÂNEO</label>
                         </td>
                       </tr>
@@ -1025,7 +1051,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="45" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="45" value="P"><label
                             class="input-group-text">OUVE TODOS OS LADOS</label>
                         </td>
                       </tr>
@@ -1033,7 +1059,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="46" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="46" value="P"><label
                             class="input-group-text">DEDICADO</label>
                         </td>
                       </tr>
@@ -1041,7 +1067,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="47" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="47" value="P"><label
                             class="input-group-text">VALORIZA A LIBERDADE</label>
                         </td>
                       </tr>
@@ -1049,7 +1075,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="48" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="48" value="P"><label
                             class="input-group-text">GOSTA MAIS DO NOVO</label>
                         </td>
                       </tr>
@@ -1057,7 +1083,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="49" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="49" value="P"><label
                             class="input-group-text">IMPROVISADO</label>
                         </td>
                       </tr>
@@ -1065,7 +1091,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="50" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="50" value="P"><label
                             class="input-group-text">SEM REGRAS</label>
                         </td>
                       </tr>
@@ -1073,7 +1099,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="51" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="51" value="P"><label
                             class="input-group-text">ABERTO AS MUDANÇAS</label>
                         </td>
                       </tr>
@@ -1081,7 +1107,7 @@
                     <div class="col-2">
                       <tr>
                         <td>
-                          <input class="form-check-input" type="radio" name="52" value="P"><label
+                          <input class="form-check-input quiz04" type="radio" name="52" value="P"><label
                             class="input-group-text">IDETIFICA OPORTUNIDADES</label>
                         </td>
                       </tr>
@@ -1091,30 +1117,19 @@
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" Class="btn btn-primary" data-toggle="modal" data-target="#quiz01">Voltar 01</button>
-            <button type="button" Class="btn btn-success" id="quiz1" data-toggle="modal"
-              data-target="#quiz01">Questionário 4</button>
-            <button type="button" id="sair" class="btn btn-danger">Sair
-            </button>
-            <button id="bt" class="btn-primary" onclick="resultado()" type="button">Resultado</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="voltarQ3">Voltar
+            03</button>
+          <button type="button" id="resultado" onclick="resultado4()" Class="btn btn-success">RESULTADO</button>
+          <button data-toggle="modal" data-target="#myModal" type="button" id="sair" class="btn btn-danger">Sair
+          </button>
         </div>
       </div>
     </div>
   </div>
   <!-- Modal 4º questionario -->
-  <script>
 
-
-    //função carregar modal informaçoes iniciais
-    $(document).ready(function () {
-      $('#myModal').modal('show');
-
-    });
-
-  </script>
 </body>
 
 </html>

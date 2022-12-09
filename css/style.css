@@ -1,98 +1,176 @@
-body{
-    background:rgb(213, 196, 233);
+body {
+    background: rgb(213, 196, 233);
+    height:auto;
+    overflow-y: auto;
 }
 
-.scopeA{
-    font-size: 40px; 
+tr{
+    color: black;  
 }
 
-.scopeB{
-    font-size: 40px; 
+/* stilos da modal quiz 01*/
+.container1 {
+    display: flex;
+    justify-content: center;
+
+}
+
+@keyframes neon{
+    from{
+        filter: drop-shadow(0 0 0 var(--cor-neon));
+    }to{
+        filter: drop-shadow(0 0 30px var(--cor-neon));
+    }
+
+}
+.numero{
+    text-align: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 70px;
+    color:black;
+    margin-right: 100px;
+    background-color: rgb(41, 212, 41);
+    animation: neon 1s alternate infinite ease-in-out;
+    --cor-neon:rgb(41, 212, 41);
+
+
+}
+
+.Status{
+    text-align: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 70px;
+    color:black;
+    margin-right: 80px;
+
+}
+
+.input-nome {
+    height: 40px;
+    width: 300px;
+
+}
+
+.input-idade {
+    height: 40px;
+    width: 100px;
+
+}
+
+.scopeA {
+    font-size: 60px;
+    margin-left: 100px;
+}
+
+.scopeB {
+    font-size: 60px;
+    margin-left: 100px;
 }
 
 
 /* stilos da modal */
-.modal-body{
+.modal-body {
     background: rgb(191, 208, 241);
 }
 
 /* stilos da modal quiz01 */
-.modal-body-quis1{
+.modal-body-quis1 {
+
     background: rgb(204, 169, 196);
 }
 
 /* stilos da modal quiz02 */
-.modal-body-quis2{
+.modal-body-quis2 {
     background: rgb(148, 179, 241);
 }
 
 /* stilos da modal quiz03 */
-.modal-body-quis3{
+.modal-body-quis3 {
     background: rgb(189, 240, 236);
 }
 
 /* stilos da modal quiz04 */
-.modal-body-quis4{
-    background: rgb(131, 91, 240);
+.modal-body-quis4 {
+    background: rgb(244, 245, 226);
 }
 
 
-.modal-title1{
-    font-size: 20px; 
+.modal-title1 {
+    font-size: 20px;
     text-align: center;
 }
 
-.modal-title{
-    font-size: 40px; 
+.modal-title {
+    font-size: 40px;
     text-align: center;
 }
 
-.modal-dialog{
-    width:1200px;
+.modal-dialog {
+    width: 1200px;
     height: 100vh;
-    
+
 }
+
 /* stilos da modal quiz 01*/
-.container{
+.container {
     display: flex;
-    justify-content: center;  
-    
+    justify-content: center;
+
 }
 
 
 /*Radios dos questionarios*/
-.form-check-input{
+.form-check-input {
     height: 20px;
     width: 20PX;
-     
+
+}
+.input-group-text-scope{
+    font-size: 30px;
+    margin-left: 10PX;
 }
 
 /*labels dos questionarios*/
-.input-group-text{
-    font-size: 20px; 
+.input-group-text {
+    font-size: 20px;
     margin-left: 10PX;
 }
 
 /*botoes*/
-.btn{
+.btn {
     height: 50px;
     width: 200px;
     font-size: 20px;
-    margin-right: 70px;
+    margin-right: 130px;
 
 }
 
 /*segundo conteudo containers dos questionários */
-.second-content{
-    margin-left: 10px;
-    
+.second-content {
+    margin-left: 0px;
+
 }
-.first-content{
-    margin-right: 10px;
- 
+
+.first-content {
+    margin-right: 0px;
+
+}
+
+.table {
+    width: 600px;
+    overflow-y: auto;
+
+    
    
 }
-.table{
-    width: 600px;
+
+
+/*alert final*/ 
+.swal-height {
+    height: 80vh;
 }
 
