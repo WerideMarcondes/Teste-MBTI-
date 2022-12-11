@@ -8,6 +8,10 @@ tr{
     color: black;  
 }
 
+h1{
+   text-align: center;
+}
+
 /* stilos da modal quiz 01*/
 .container1 {
     display: flex;
@@ -169,8 +173,6 @@ tr{
 }
 
 
-/*alert final*/ 
-.swal-height {
-    height: 80vh;
+.alerta1{
+    font-size: 50px;
 }
-

@@ -32,6 +32,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
+          <h1>Parte deste formulário foi extraído do PMK Learning Environment</h1>
           <h5 class="modal-title1" id="exampleModalLabel">"Há três maneiras de lidar com diferenças: você pode
             considerar a outra pessoa errada e se indignar; você
             pode considerar você mesmo errado e se deprimir; ou você pode considerar que as duas formas são
@@ -312,10 +313,10 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" Class="btn btn-primary" data-toggle="modal" id="voltarQ1">Voltar
+          <button type="button" Class="btn btn-primary" data-toggle="modal" id="voltar">Voltar
             01</button>
           <button onclick="resultado()" type="button" Class="btn btn-success" data-toggle="modal">Questionário
-            2</button>
+             02</button>
           <button data-toggle="modal" type="button" id="sair" class="btn btn-danger">Sair
         </div>
       </div>
@@ -560,10 +561,11 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" Class="btn btn-primary" data-toggle="modal" id="voltarQ1">Voltar
+            </button>
+          <button type="button" Class="btn btn-primary" data-toggle="modal" onclick="voltarQuiz1()" id="voltarQ1">Voltar 
             01</button>
-          <button type="button" onclick="resultado2()" Class="btn btn-success" data-toggle="modal">Questionário
-            3</button>
+          <button type="button" onclick="resultado2()" Class="btn btn-success" data-toggle="modal">Questionário 03
+            </button>
           <button type="button" id="sair" class="btn btn-danger">Sair
           </button>
         </div>
@@ -840,10 +842,9 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" Class="btn btn-primary" data-toggle="modal" id="voltarQ2">Voltar
-            02</button>
-          <button type="button" onclick="resultado3()" Class="btn btn-success" data-toggle="modal">Questionário
-            4</button>
+            <button type="button" Class="btn btn-primary" onclick="voltarQuiz2()" id="voltarQ2">Voltar 02</button>
+          <button type="button" onclick="resultado3()" Class="btn btn-success" data-toggle="modal">Questionário 
+            04</button>
           <button type="button" id="sair" class="btn btn-danger">Sair
           </button>
         </div>
@@ -1119,7 +1120,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-toggle="modal" id="voltarQ3">Voltar
+          <button type="button" class="btn btn-primary" data-toggle="modal" onclick="voltarQuiz3()" id="voltarQ3">Voltar
             03</button>
           <button type="button" id="resultado" onclick="resultado4()" Class="btn btn-success">RESULTADO</button>
           <button data-toggle="modal" data-target="#myModal" type="button" id="sair" class="btn btn-danger">Sair
