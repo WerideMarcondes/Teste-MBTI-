@@ -71,8 +71,6 @@
   </div>
   <!-- Modal Informaçoes iniciais -->
 
-
-
   <!-- Modal 1º questionario -->
   <div class="modal fade" id="quiz01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
     data-keyboard="false">
@@ -80,17 +78,16 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="container1">
-            <div class="StatusQuis1 Status">1º</div>
-            <div class="StatusQuis1 Status">2º</div>
-            <div class="StatusQuis1 Status">3º</div>
-            <div class="StatusQuis1 Status">4º</div>
+            <div class="voltarStatusQuiz1 StatusQuiz1  Numero" name="1">1º</div>
+            <div class="voltarStatusQuiz2 StatusQuiz1  Numero" name="2">2º</div>
+            <div class="voltarStatusQuiz3 StatusQuiz1  Numero" name="3">3º</div>
+            <div class="voltarStatusQuiz4 StatusQuiz1  Numero" name="4">4º</div>
           </div>
           <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text-scope">1º QUESTIONÁRIO COMO VOCÊ
               INTERAGE COM O
               MUNDO?</label></h5>
         </div>
         <div class="modal-body-quis1">
-
           <div class="container">
             <div class="content first-content">
               <div class="row align-items-start">
@@ -316,14 +313,13 @@
           <button type="button" Class="btn btn-primary" data-toggle="modal" id="voltar">Voltar
             01</button>
           <button onclick="resultado()" type="button" Class="btn btn-success" data-toggle="modal">Questionário
-             02</button>
-          <button data-toggle="modal" type="button" id="sair" class="btn btn-danger">Sair
+            02</button>
+          <button data-toggle="modal" type="button" onclick="Sair()" id="sair" class="btn btn-danger">Sair
         </div>
       </div>
     </div>
   </div>
   <!-- Modal 1º questionario -->
-
 
   <!-- Modal 2º questionario -->
   <div class="modal fade" id="quiz02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
@@ -332,17 +328,16 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="container1">
-            <div class="StatusQuis2 Status">1º</div>
-            <div class="StatusQuis2 Status">2º</div>
-            <div class="StatusQuis2 Status">3º</div>
-            <div class="StatusQuis2 Status">4º</div>
+            <div class="voltarStatusQuiz1  StatusQuiz2 Numero" name="1">1º</div>
+            <div class="voltarStatusQuiz02 StatusQuiz Numero" name="2">2º</div>
+            <div class="voltarStatusQuiz03 StatusQuiz Numero" name="3">3º</div>
+            <div class="voltarStatusQuiz04 StatusQuiz Numero" name="4">4º</div>
           </div>
           <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text-scope">2º QUESTIONÁRIO COMO VOCÊ
               PERCEBE E ASSIMILA AS
               INFORMAÇÕES?</label></h5>
         </div>
         <div class="modal-body-quis2">
-
           <div class="container">
             <div class="content first-content">
               <div class="row align-items-start">
@@ -561,13 +556,11 @@
           </div>
         </div>
         <div class="modal-footer">
-            </button>
-          <button type="button" Class="btn btn-primary" data-toggle="modal" onclick="voltarQuiz1()" id="voltarQ1">Voltar 
+          <button type="button" Class="btn btn-primary" data-toggle="modal" onclick="voltarQuiz1()" id="voltarQ1">Voltar
             01</button>
           <button type="button" onclick="resultado2()" Class="btn btn-success" data-toggle="modal">Questionário 03
-            </button>
-          <button type="button" id="sair" class="btn btn-danger">Sair
           </button>
+          <button data-toggle="modal" type="button" onclick="Sair()" id="sair" class="btn btn-danger">Sair </button>
         </div>
       </div>
     </div>
@@ -581,12 +574,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="container1">
-            <div class="StatusQuis3 Status">1º</div>
-            <div class="StatusQuis3 Status">2º</div>
-            <div class="StatusQuis3 Status">3º</div>
-            <div class="StatusQuis3 Status">4º</div>
+            <div class="voltarStatusQuiz01 StatusQuiz3 Numero" name="1">1º</div>
+            <div class="voltarStatusQuiz02 StatusQuiz4 Numero" name="2">2º</div>
+            <div class="voltarStatusQuiz03 StatusQuiz Numero" name="3">3º</div>
+            <div class="voltarStatusQuiz04 StatusQuiz Numero" name="4">4º</div>
           </div>
-          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text-scope"> 3º QUESTIONÁRIO COMO VOCÊ
+          <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text-scope"> 3º QUESTIONÁRIO COMO
+              VOCÊ
               PERCEBE E ASSIMILA
               AS INFORMAÇÕES?</label></h5>
         </div>
@@ -842,11 +836,10 @@
           </div>
         </div>
         <div class="modal-footer">
-            <button type="button" Class="btn btn-primary" onclick="voltarQuiz2()" id="voltarQ2">Voltar 02</button>
-          <button type="button" onclick="resultado3()" Class="btn btn-success" data-toggle="modal">Questionário 
+          <button type="button" Class="btn btn-primary" onclick="voltarQuiz2()" id="voltarQ2">Voltar 02</button>
+          <button type="button" onclick="resultado3()" Class="btn btn-success" data-toggle="modal">Questionário
             04</button>
-          <button type="button" id="sair" class="btn btn-danger">Sair
-          </button>
+          <button data-toggle="modal" type="button" onclick="Sair()" id="sair" class="btn btn-danger">Sair</button>
         </div>
       </div>
     </div>
@@ -860,10 +853,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="container1">
-            <div class="StatusQuis4 Status">1º</div>
-            <div class="StatusQuis4 Status">2º</div>
-            <div class="StatusQuis4 Status">3º</div>
-            <div class="StatusQuisFinal Status">4º</div>
+            <div class="StatusQuiz01 Numero" name="1">1º</div>
+            <div class="StatusQuiz02 Numero" name="2">2º</div>
+            <div class="StatusQuiz03 Numero" name="3">3º</div>
+            <div class="StatusQuisFinal Numero" name="4">4º</div>
           </div>
           <h5 class="modal-title" id="exampleModalLabel"><label class="input-group-text-scope">4º QUESTIONÁRIO COMO VOCÊ
               PREFERE ORGANIZAR SUA VIDA?</label></h5>
@@ -1123,14 +1116,13 @@
           <button type="button" class="btn btn-primary" data-toggle="modal" onclick="voltarQuiz3()" id="voltarQ3">Voltar
             03</button>
           <button type="button" id="resultado" onclick="resultado4()" Class="btn btn-success">RESULTADO</button>
-          <button data-toggle="modal" data-target="#myModal" type="button" id="sair" class="btn btn-danger">Sair
+          <button data-toggle="modal" type="button" onclick="Sair()" id="sair" class="btn btn-danger">Sair
           </button>
         </div>
       </div>
     </div>
   </div>
   <!-- Modal 4º questionario -->
-
 </body>
 
 </html>

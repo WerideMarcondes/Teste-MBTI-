@@ -1,7 +1,9 @@
 body {
-    background: rgb(213, 196, 233);
-    height:auto;
-    overflow-y: auto;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+
 }
 
 tr{
@@ -27,22 +29,8 @@ h1{
     }
 
 }
-.numero{
-    text-align: center;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    font-size: 70px;
-    color:black;
-    margin-right: 100px;
-    background-color: rgb(41, 212, 41);
-    animation: neon 1s alternate infinite ease-in-out;
-    --cor-neon:rgb(41, 212, 41);
 
-
-}
-
-.Status{
+.Numero{
     text-align: center;
     border-radius: 50%;
     width: 100px;
@@ -79,27 +67,32 @@ h1{
 /* stilos da modal */
 .modal-body {
     background: rgb(191, 208, 241);
+   
 }
 
 /* stilos da modal quiz01 */
-.modal-body-quis1 {
-
+.modal-body-quis1{
     background: rgb(204, 169, 196);
+   
+
 }
 
 /* stilos da modal quiz02 */
 .modal-body-quis2 {
     background: rgb(148, 179, 241);
+    
 }
 
 /* stilos da modal quiz03 */
 .modal-body-quis3 {
     background: rgb(189, 240, 236);
+   
 }
 
 /* stilos da modal quiz04 */
 .modal-body-quis4 {
     background: rgb(244, 245, 226);
+    
 }
 
 
@@ -115,9 +108,11 @@ h1{
 
 .modal-dialog {
     width: 1200px;
-    height: 100vh;
+    height: 80%;
+    overflow:auto;
 
 }
+
 
 /* stilos da modal quiz 01*/
 .container {
@@ -173,6 +168,7 @@ h1{
 }
 
 
-.alerta1{
+.Swal.fire{
     font-size: 50px;
+    text-align: justify;
 }
